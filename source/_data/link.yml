@@ -1,0 +1,28 @@
+- class_name: 友情链接
+  class_desc: 本博客由下面网站鼎力相助
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网誌框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 主题网站
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: GitHub
+      link: https://github.com/
+      avatar: /img/GitHub.jpg
+      descr: 最大的开源代码平台
+    - name: BliBli
+      link: https://www.bilibili.com/
+      avatar: /img/bilbil.jpg
+      descr: "中国最大的学习平台"
+    - name: Runoob
+      link: https://www.runoob.com/
+      avatar: /img/Runoob.jpeg
+      descr: 最大的小白聚集地
+

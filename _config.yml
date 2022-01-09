@@ -3,14 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: Hero
+subtitle: '学习，让生活更加美好'
 description: ''
 keywords:
-author: John Doe
-language: en
+author: Wo Diu
+language: zh-CN
 timezone: ''
-
+email: 1834519329@qq.com
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
