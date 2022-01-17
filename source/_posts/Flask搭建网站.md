@@ -392,3 +392,35 @@ def a_page():
 | 范围                 | 网站内        | 可以跨站点                                               |
 | JSP                  | URL不可带参数 | URL可带参数                                              |
 | 是否隐藏路径         | 隐藏          | 不隐藏                                                   |
+
+
+
+### 结合SQL
+
+导入pymysql
+
+```python
+import pymysql
+
+db = pymysql.connect(host="localhost" 	#设置ip
+                     ,user="root"		#设置用户名
+                     ,password="123456"	#设置密码
+                     ,db="wodiu")		#设置数据库
+cur = db.cursor()						#获取一个游标
+cur.execute("select * from aaa")		#执行语句
+db.commit()								#提交语句并执行
+List=[]					
+for i in cur.fetchall():				#cur.fetchall是获取所有的数据
+    print(list(i))
+
+```
+
+> db.rollback() #可以使用这条命令,如果发生异常时进行滚回
+
+
+
+下面时sql的查询操作
+
+- **fetchone():** 该方法获取下一个查询结果集。结果集是一个对象
+- **fetchall():** 接收全部的返回结果行.
+- **rowcount:** 这是一个只读属性，并返回执行execute()方法后影响的行数。
