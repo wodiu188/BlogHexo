@@ -132,3 +132,6 @@ if (isset($_POST['submit'])) {
 首先上传一个,包含gif头文件的1.gif内容是payload,然后使用include去包含这个文件
 
 ![image-20220118221823774](D:\Code\pojo\Blog\BlogHexo\public\img\upload-2.png)
+
+
+
