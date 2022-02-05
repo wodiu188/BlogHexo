@@ -12,7 +12,8 @@ keywords:
       - 协程
       - WSGI
       - Python的web底层
-
+top_img: /img/py进程线程协程.jpg
+cover: /img/py进程线程协程.jpg
 ---
 
 # 多任务

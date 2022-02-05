@@ -7,6 +7,8 @@ tags:
 categories:
 description: Nginx,中间件服务器
 keywords:
+top_img: /img/nginx.png
+cover: /img/nginx.png
 ---
 
 # Nginx

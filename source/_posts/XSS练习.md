@@ -3,13 +3,15 @@ title: XSS练习
 date: 2022-01-16 14:34:20
 tags:
       - 安全
-      -
+      - 靶场练习
 categories:
       - 安全
 description:
 keywords:
       - XSS
       - 练习
+top_img: /img/xss-img.png
+cover: /img/xss-img.png
 ---
 
 # XSS

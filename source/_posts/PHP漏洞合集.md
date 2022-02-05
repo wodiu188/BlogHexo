@@ -9,7 +9,8 @@ categories:
       - 安全
 description:
 keywords:
-
+top_img: /img/PHP_BUG.jpg
+cover: /img/PHP_BUG.jpg
 ---
 
 # PHP

@@ -9,6 +9,8 @@ categories:
       - 前端
 description: 感觉没啥好讲的，随便弄一篇文章讲讲顺带最好了了Ajax的原理
 keywords:
+top_img: /img/jQuery.jpg
+cover: /img/jQuery.jpg
 ---
 
 # JQuery

@@ -65,3 +65,13 @@ aside:
     post_count: true
     last_push_date: true
 
+
+canvas_ribbon:
+  enable: true
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: false  #設置是否每次點擊都更換綵帶
+  mobile: false # false 手機端不顯示 true 手機端顯示
+
+

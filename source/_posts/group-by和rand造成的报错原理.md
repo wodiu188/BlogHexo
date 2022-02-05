@@ -7,6 +7,8 @@ tags:
 categories: SQL注入
 description: 深刻研究报错注入
 keywords:
+top_img: /img/BUG.jpg
+cover: /img/BUG.jpg
 ---
 
 
