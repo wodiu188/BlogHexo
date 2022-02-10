@@ -13,6 +13,69 @@ keywords:
 
 # Docker
 
+
+
+#### centos安装
+
+一键安装
+
+```bash
+curl -sSL https://get.daocloud.io/docker | sh
+```
+
+卸载以前的docker
+
+>**sudo** **yum remove** docker \
+>   docker-client \
+>   docker-client-latest \
+>   docker-common \
+>   docker-latest \
+>   docker-latest-logrotate \
+>   docker-logrotate \
+>   docker-engine
+
+安装仓库
+
+>**sudo** **yum install** -y yum-utils \
+> device-mapper-persistent-data \
+> lvm2
+
+
+
+设置仓库源
+
+阿里的
+
+>**sudo** yum-config-manager \
+>--add-repo \
+>http:**//**mirrors.aliyun.com**/**docker-ce**/**linux**/**centos**/**docker-ce.repo
+
+清华大学的
+
+>**sudo** yum-config-manager \
+>--add-repo \
+>https:**//**mirrors.tuna.tsinghua.edu.cn**/**docker-ce**/**linux**/**centos**/**docker-ce.repo
+
+
+
+安装最新版本的 Docker Engine-Community 和 containerd
+
+```bash
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
+
+启动docker
+
+```bash
+systemctl start docker
+```
+
+
+
+
+
+#### Windows安装
+
 首先，docker和VMware不兼容，我们要相互切换就要使用命令开启或者关闭
 
 >1.使用管理员身份打开powershell
@@ -178,11 +241,8 @@ RUN后接运行的命令
 下面是dockerfile的命令就像FROM和RUN一样
 
 - COPY 源路径 目标路径:从上下文复制到容器指定路径
-
 - ADD和COPY差不多不过,add在运行tar类型文件会自动解压到目标路径
-
 - CMD:docker run的时候默认使用的命令
-
 - ENTRYPOINT :和CMD差不多但是不会被覆盖,如果想要覆盖要使用 --entrypoint
 - ENV :设置环境变量
 - ARG :设置环境变量,仅在build过程中有效
@@ -193,4 +253,20 @@ RUN后接运行的命令
 - HEALTHCHECK :用来设置docker来监控时调用的命令
 - LABEL :设置元数据
 - ONBUILD :没看懂
+
+
+
+### Compose
+
+Compose 是用于定义和运行多容器Docker应用程序的工具。借助于Compose，用户可以使用 YML 文件来配置应用程序需要的所有服务，然后使用==命令从 YML 文件配置中创建并启动所有服务==。简单来说，Docker-compose可以非常方便地创建比较复杂的容器。
+
+### VULHUB
+
+项目都存储在GitHub上面，搜索相应的并且下载下来只需要下载相应的文件即可，然后运行Docker-compose即可
+
+到该目录下面运行cmd命令，然后使用docker-compose up -d命令来拉取并运行
+
+![image-20220205165638767](D:\Code\pojo\Blog\BlogHexo\public\img\docker-8.png)
+
+
 

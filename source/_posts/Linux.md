@@ -495,10 +495,16 @@ scp上传文件
 第一个字符表示目录、文件、连接
 
 - 当为[d]时为目录
+
 - 当为[-]则是文件
+
 - 当为[|]则是连接
+
 - 当为[b]表示为设备文件里面的可供存储的周边设备
+
 - 若是[c]则表示属于设备文件属于串行端口设备,如键盘鼠标
+
+- > file 文件名     //查看文件类型
 
 接下来每三个字符一组分别又rwx组成,r代表可读,w代表可写,x代表可执行[-]代表没有权限(如果为目录的话没有x不能进入,w权限并不能代表可以删除文件)
 
@@ -1626,6 +1632,22 @@ vim可以使用 vim [file1] [file2]进行同时编辑
 
 
 
+常用快捷键
+
+w:下一个单词的词首
+
+e:下一个单词的词尾
+
+d:上一个单词的词首
+
+^:行首
+
+$:行尾
+
+dd:删除一整行
+
+:[行] 跳到某一行
+
 ## Shell
 
 查看可使用的shell
@@ -1919,11 +1941,30 @@ alise 别名='命令 选项'
 
 ## 数据流重定向
 
+重定向数据表示
+
+0=keyboard 键盘输入,并返回在前端 
+
+1=monitor 正确返回值 输出到前端 
+
+2= monitor 错误返回值 输出到前端
+
+echo $? 输出上一个的状态码,不是0就是错误
+
 - \>:标准输出流到指定位置并进行覆盖
+
+  - > 一般来说, "1>" 通常可以省略成 ">". 
+
 - \>\>:标准输出流到指定位置并进行叠加
+
 - <:标准输入流,将命令所需的字符串通过流进行输入
+
 - <<:标准输入流,将命令所需的字符串通过键盘输入并设置结束标志
+
+  - ![111](D:\Code\pojo\Blog\BlogHexo\public\img\linux.png)
+
 - 2\>:标准错误流到指定位置并进行覆盖
+
 - 2\>\>:标准错误流到指定位置并进行叠加
 
 > 如果错误流和正确流都要写入一个文件可以使用2>&1 或者 &>
@@ -2114,10 +2155,10 @@ alise 别名='命令 选项'
   - -i:忽略大小写
 
   - > join -t ':' /etc/passwd /etc/shadow
-    > root:x:0:0:root:/root:/bin/bash:$1$ZsTljEDo$JK/OTgZctSUcDODqjDrg.0:18880:0:99999:7:::
-    > bin:x:1:1:bin:/bin:/sbin/nologin:*:17834:0:99999:7:::
-    > daemon:x:2:2:daemon:/sbin:/sbin/nologin:*:17834:0:99999:7:::
-    > adm:x:3:4:adm:/var/adm:/sbin/nologin:*:17834:0:99999:7:::
+    > root:x :0:0:root:/root:/bin/bash:$1$ZsTljEDo$JK/OTgZctSUcDODqjDrg.0:18880:0:99999:7:::
+    > bin:x :1:1:bin:/bin:/sbin/nologin:*:17834:0:99999:7:::
+    > daemon:x : 2:2:daemon:/sbin:/sbin/nologin:*:17834:0:99999:7:::
+    > adm:x :3:4:adm:/var/adm:/sbin/nologin:*:17834:0:99999:7:::
 
   - 建议在连接两个文件之前先排序
 
@@ -5311,20 +5352,21 @@ firewall-cmd --list-ports查看开启 或者iptables -nL
   - 数字目录都是进程中的pid比如/proc/1就是对应进程中pid为1的进程,里面存放着相关进程的信息
 - /sys:不占硬盘容量也是保存系统信息的.
 
-全字段显示
 
-```
-from django.forms.models import model_to_dict
-from Book_info.models import Book
-    allbook = Book.objects.all()
-    for i in allbook:
-        print(model_to_dict(i))
-```
 
-```
-from django.forms.models import model_to_dict
-from Book_info.models import Book
-    allbook = Book.objects.all()
-    for i in allbook:
-        print(model_to_dict(i))
-```
+
+
+## 小知识
+
+安装中文帮助手册
+
+> yum install man-pages-zh-CN.noarch
+>
+> echo "alias cman='man -M /usr/share/man/zh_CN'" >> ~/.bashrc
+>
+> source .bashrc
+
+
+
+重定向
+
