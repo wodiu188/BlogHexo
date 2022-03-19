@@ -116,7 +116,7 @@ function render (input) {
 
 转换网址在这https://www.qqxiuzi.cn/bianma/zifushiti.php
 
-![image-20220116145138995](D:\Code\pojo\Blog\BlogHexo\public\img\xss.png)
+![image-20220116145138995](..\..\public\img\xss.png)
 
 
 
@@ -393,7 +393,7 @@ https://xssaq.com/yx/level1.php
 
 他给了一个输入框,随便输入点东西然后查看源代码
 
-![image-20220116184634174](D:\Code\pojo\Blog\BlogHexo\public\img\xss-8.png)
+![image-20220116184634174](..\..\public\img\xss-8.png)
 
 他并没有把input里面的内容给屏蔽
 
@@ -407,7 +407,7 @@ https://xssaq.com/yx/level1.php
 
 直接查看源代码,然后测试是否可以闭合
 
-![image-20220116184953951](D:\Code\pojo\Blog\BlogHexo\public\img\xss-9.png)
+![image-20220116184953951](..\..\public\img\xss-9.png)
 
 发现可以使用单引号闭合,然后自由发挥把
 
@@ -441,7 +441,7 @@ https://xssaq.com/yx/level1.php
 
 前端字符串中可以使用Unicode
 
-![image-20220116195303204](D:\Code\pojo\Blog\BlogHexo\public\img\xss-10.png)
+![image-20220116195303204](..\..\public\img\xss-10.png)
 
 
 
@@ -460,7 +460,7 @@ javascript:alert(1)//http://
 
 http://chanzhi7.njhack.xyz/www/index.php
 
-![image-20220116182410449](D:\Code\pojo\Blog\BlogHexo\public\img\xss-2.png)
+![image-20220116182410449](..\..\public\img\xss-2.png)
 
 
 
@@ -470,13 +470,13 @@ http://chanzhi7.njhack.xyz/www/index.php
 
 输入单引号然后报错,判断有防火墙
 
-![image-20220116182804828](D:\Code\pojo\Blog\BlogHexo\public\img\xss-3.png)
+![image-20220116182804828](..\..\public\img\xss-3.png)
 
 
 
 进行两次url转码然后查看效果,发现通过了
 
-![image-20220116182853354](D:\Code\pojo\Blog\BlogHexo\public\img\xss-4.png)
+![image-20220116182853354](..\..\public\img\xss-4.png)
 
 
 
@@ -486,17 +486,17 @@ http://chanzhi7.njhack.xyz/www/index.php
 
 
 
-![image-20220116183059503](D:\Code\pojo\Blog\BlogHexo\public\img\xss-5.png)
+![image-20220116183059503](..\..\public\img\xss-5.png)
 
 发现网页已经有改变了,但是还剩没有打到我们效果,查看源码
 
-![image-20220116183204588](D:\Code\pojo\Blog\BlogHexo\public\img\xss-6.png)
+![image-20220116183204588](..\..\public\img\xss-6.png)
 
 
 
 发现\<script\>被屏蔽,我们再一次用url编码查看结果
 
-![image-20220116183331018](D:\Code\pojo\Blog\BlogHexo\public\img\xss-7.png)
+![image-20220116183331018](..\..\public\img\xss-7.png)
 
 然后提交成功
 

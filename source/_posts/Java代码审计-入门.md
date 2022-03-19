@@ -22,7 +22,7 @@ cover: /img/java.gif
 >如果想重新开启：
 >bcdedit /set hypervisorlaunchtype auto(开启docker)
 
-![image-20220205104855807](D:\Code\pojo\Blog\BlogHexo\public\img\Java-1.png)
+![image-20220205104855807](..\..\public\img\Java-1.png)
 
 开启Hyper-V(用docker的话),如果要使用VMware的话就要关闭Hyper-V
 

@@ -60,7 +60,7 @@ winlogon输入用户名和密码后交给lsass.exe,然后将密码计算出来�
 
 
 
-![image-20220302192324392](D:\Code\pojo\Blog\BlogHexo\public\img\kerberos-1.png)
+![image-20220302192324392](..\..\public\img\kerberos-1.png)
 
 ### 哈希传递
 
@@ -106,7 +106,7 @@ Metasploit
 
 
 
-![image-20220302194123945](D:\Code\pojo\Blog\BlogHexo\public\img\kerberos-2.png)
+![image-20220302194123945](..\..\public\img\kerberos-2.png)
 
 客户端如果想要获取服务器的权限首先要跟KDC（Kerberos）获取票据
 
@@ -116,7 +116,7 @@ Metasploit
 
 **AS服务器的交互**
 
-![image-20220302194516022](D:\Code\pojo\Blog\BlogHexo\public\img\kerberos-3.png)
+![image-20220302194516022](..\..\public\img\kerberos-3.png)
 
 1.的数据包含：
 
@@ -136,7 +136,7 @@ Metasploit
 
 **TGS服务器的交互**
 
-![image-20220302200331534](D:\Code\pojo\Blog\BlogHexo\public\img\kerberos-4.png)
+![image-20220302200331534](..\..\public\img\kerberos-4.png)
 
 
 
@@ -155,7 +155,7 @@ Metasploit
 
 **与server端交互**
 
-![image-20220302200947446](D:\Code\pojo\Blog\BlogHexo\public\img\kerberos-5.png)
+![image-20220302200947446](..\..\public\img\kerberos-5.png)
 
 
 

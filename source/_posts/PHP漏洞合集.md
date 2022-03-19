@@ -55,7 +55,7 @@ for($i=1;;$i++){
 >0e251288019
 >0e001233333333333334557778889
 
-![image-20220121131916793](D:\Code\pojo\Blog\BlogHexo\public\img\PHPBug-2.png)
+![image-20220121131916793](..\..\public\img\PHPBug-2.png)
 
 ```php
  <?php
@@ -204,7 +204,7 @@ aabC9RqS 0e041022518165728065344349536299
 >
 > 240610708---aawBzC
 
-![image-20220121134720525](D:\Code\pojo\Blog\BlogHexo\public\img\PHPBug-3.png)
+![image-20220121134720525](..\..\public\img\PHPBug-3.png)
 
 第七题还是用数组过滤
 

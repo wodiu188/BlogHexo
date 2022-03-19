@@ -122,7 +122,7 @@ emmm，maven的下载安装我就不讲了
 
 以上面的项目为例子创建完成后目录结构大致如下：
 
-![image-20220114193503942](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-2.png)
+![image-20220114193503942](..\..\public\img\Maven-2.png)
 
 
 
@@ -134,7 +134,7 @@ emmm，maven的下载安装我就不讲了
 
 会生成一个target目录,而target目录如下
 
-![image-20220114193818618](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-3.png)
+![image-20220114193818618](..\..\public\img\Maven-3.png)
 
 
 
@@ -223,7 +223,7 @@ https://mvnrepository.com/
   - post-clean（清理后）
 - default：用于构建项目
   - 包含如下声明周期
-  - ![image-20220114201141085](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-4.png)
+  - ![image-20220114201141085](..\..\public\img\Maven-4.png)
 - site：用于建立项目站点
   - 这个站点的项目构建步骤是下面这种
   - pre-site
@@ -244,7 +244,7 @@ maven在上面的生命周期的每个任务不是maven来实现的而是用插�
 
 例如如下部分:
 
-![image-20220114202137641](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-5.png)
+![image-20220114202137641](..\..\public\img\Maven-5.png)
 
 
 
@@ -329,7 +329,7 @@ maven在上面的生命周期的每个任务不是maven来实现的而是用插�
 
 如果有了项目但是不知道groupId，artifactId在哪看可以在jar包中查看
 
-![image-20220115090557928](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-9.png)
+![image-20220115090557928](..\..\public\img\Maven-9.png)
 
 
 
@@ -361,11 +361,11 @@ set classpath=%classpath%;D:\maven\helloMaven\target\helloMaven-1.0-SNAPSHOT.jar
 
 首先File->Project Structure
 
-![image-20220114204612350](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-6.png)
+![image-20220114204612350](..\..\public\img\Maven-6.png)
 
 然后Liberaies的add
 
-![image-20220114204711280](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-7.png)
+![image-20220114204711280](..\..\public\img\Maven-7.png)
 
 
 
@@ -458,7 +458,7 @@ SNAPSHOT和RELEASE的区别是
 
 这是自动打包插件,可以将多个maven项目一起进行打包,下图是所用到的项目
 
-![image-20220115085148870](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-8.png)
+![image-20220115085148870](..\..\public\img\Maven-8.png)
 
 
 
@@ -584,13 +584,13 @@ Process finished with exit code 0
 
 结果如下
 
-![image-20220116090705000](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-10.png)
+![image-20220116090705000](..\..\public\img\Maven-10.png)
 
 
 
 
 
-![image-20220116095724720](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-11.png)
+![image-20220116095724720](..\..\public\img\Maven-11.png)
 
 可以看出他继承了父依赖
 
@@ -750,7 +750,7 @@ Process finished with exit code 0
 
 
 
-![Maven 聚合](D:\Code\pojo\Blog\BlogHexo\public\img\Maven-12.png)
+![Maven 聚合](..\..\public\img\Maven-12.png)
 
 从上图可以发现其他的模块也一起打包了
 

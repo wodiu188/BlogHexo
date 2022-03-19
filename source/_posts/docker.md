@@ -87,7 +87,7 @@ systemctl start docker
 >如果想重新开启：
 >bcdedit /set hypervisorlaunchtype auto(开启docker)
 
-![image-20220205104855807](D:\Code\pojo\Blog\BlogHexo\public\img\Java-1.png)
+![image-20220205104855807](..\..\public\img\Java-1.png)
 
 开启Hyper-V(用docker的话),如果要使用VMware的话就要关闭Hyper-V
 
@@ -141,11 +141,11 @@ systemctl start docker
 
 - ps:查看运行的镜像
 
-  - ![image-20220205125336762](D:\Code\pojo\Blog\BlogHexo\public\img\docker-1.png)
+  - ![image-20220205125336762](..\..\public\img\docker-1.png)
 
 - logs {容器的id或者容器的名称}:查看镜像的日志
 
-  - ![image-20220205125731891](D:\Code\pojo\Blog\BlogHexo\public\img\docker-2.png)
+  - ![image-20220205125731891](..\..\public\img\docker-2.png)
 
 - stop {容器的id或者容器名称}:用来停止容器
 
@@ -167,7 +167,7 @@ systemctl start docker
 
 - import {容器位置} {容器名称:版本}:导入容器
 
-  - ![image-20220205131048139](D:\Code\pojo\Blog\BlogHexo\public\img\docker-3.png)
+  - ![image-20220205131048139](..\..\public\img\docker-3.png)
 
 - remove -f {容器名称或者容器id}:删除容器
 
@@ -184,19 +184,19 @@ systemctl start docker
 ==容器部分==
 
 - images:显示所有的容器
-  - ![image-20220205134517220](D:\Code\pojo\Blog\BlogHexo\public\img\docker-4.png)
+  - ![image-20220205134517220](..\..\public\img\docker-4.png)
   - 如果要运行aaa可以使用这条命令 docker run aaa:v1或者使用image id也可以 docker run {镜像id}
 
 - search:搜索镜像
-  - ![image-20220205135103800](D:\Code\pojo\Blog\BlogHexo\public\img\docker-5.png)
+  - ![image-20220205135103800](..\..\public\img\docker-5.png)
 - commit {容器的id} 镜像名称:版本号:更新镜像
   - -m:描述信息
   - -a:作者
   - 当我们对镜像做了修改后可以使用commit进行更新
-  - ![image-20220205140450696](D:\Code\pojo\Blog\BlogHexo\public\img\docker-6.png)
+  - ![image-20220205140450696](..\..\public\img\docker-6.png)
 
 - tag image_id 镜像名称:镜像版本
-  - ![image-20220205140646834](D:\Code\pojo\Blog\BlogHexo\public\img\docker-7.png)
+  - ![image-20220205140646834](..\..\public\img\docker-7.png)
   - 使用上面的这种方法进行修改镜像
 - ==build:创建一个docker镜像(暂时用不到就不做记录了)==
 
@@ -266,7 +266,7 @@ Compose 是用于定义和运行多容器Docker应用程序的工具。借助于
 
 到该目录下面运行cmd命令，然后使用docker-compose up -d命令来拉取并运行
 
-![image-20220205165638767](D:\Code\pojo\Blog\BlogHexo\public\img\docker-8.png)
+![image-20220205165638767](..\..\public\img\docker-8.png)
 
 
 

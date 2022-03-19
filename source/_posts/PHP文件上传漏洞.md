@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 
 发现可以上传并且没有被重命名所以可以尝试图片注入的方式（不过这种上传方式会导致所有图片都没法使用）
 
-![image-20220118203922248](D:\Code\pojo\Blog\BlogHexo\public\img\upload-1.png)
+![image-20220118203922248](..\..\public\img\upload-1.png)
 
 `.htaccess`的内容如上图
 
@@ -133,7 +133,7 @@ if (isset($_POST['submit'])) {
 
 首先上传一个,包含gif头文件的1.gif内容是payload,然后使用include去包含这个文件
 
-![image-20220118221823774](D:\Code\pojo\Blog\BlogHexo\public\img\upload-2.png)
+![image-20220118221823774](..\..\public\img\upload-2.png)
 
 
 

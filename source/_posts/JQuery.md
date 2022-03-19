@@ -52,7 +52,7 @@ $(选择的标签元素).要执行的函数
 
 
 
-![image-20220115191627241](D:\Code\pojo\Blog\BlogHexo\public\img\JQuery-1.png)
+![image-20220115191627241](..\..\public\img\JQuery-1.png)
 
 
 
@@ -114,7 +114,7 @@ $(".kkk").hide()
     > $("p").eq(1);
     >});
 
-![image-20220115210013313](D:\Code\pojo\Blog\BlogHexo\public\img\JQuery-2.png)
+![image-20220115210013313](..\..\public\img\JQuery-2.png)
 
 
 

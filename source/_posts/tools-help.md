@@ -36,29 +36,29 @@ cover: /img/tools.png
 
 Cobalt Stricke->listener->add添加监听器
 
-![image-20220218105927379](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-1.png)
+![image-20220218105927379](..\..\public\img\cobaltStrike-1.png)
 
 注意这个Hosts是需要添加攻击者的ip
 
-![image-20220218110141048](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-2.png)
+![image-20220218110141048](..\..\public\img\cobaltStrike-2.png)
 
 创建完成后显示如上方的可以看出监听了80端口
 
-![image-20220218110809529](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-3.png)
+![image-20220218110809529](..\..\public\img\cobaltStrike-3.png)
 
 单机launch以后出现如下框
 
-![image-20220218110849052](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-4.png)
+![image-20220218110849052](..\..\public\img\cobaltStrike-4.png)
 
 把脚本内容复制到一个文件中(Windows能运行的格式),之后单机ok,在Event Log选项框中就会显示监听记录,然后用Windows来执行这个文件就可以上线了
 
-![image-20220218111623239](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-5.png)
+![image-20220218111623239](..\..\public\img\cobaltStrike-5.png)
 
 然后就可以看出来上线了
 
 右击该电脑后选择interact后如下框内可以输入命令（默认60秒回显一次，如果想要设置时间右击被控制的电脑选择session->sleep）,**使用help可以查看所有的命令**
 
-![image-20220218111744041](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-6.png)
+![image-20220218111744041](..\..\public\img\cobaltStrike-6.png)
 
 
 
@@ -85,7 +85,7 @@ Cobalt Stricke->listener->add添加监听器
 
     - ProxyPivots：代理模块
 
-      - ![image-20220218121457035](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-7.png)
+      - ![image-20220218121457035](..\..\public\img\cobaltStrike-7.png)
 
     - screenshots：截图
 
@@ -125,13 +125,13 @@ Cobalt Stricke->listener->add添加监听器
 
         - sub定义函数sub fun1{println("111");}fun1();
 
-          - ![image-20220218141618775](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-14.png)
+          - ![image-20220218141618775](..\..\public\img\cobaltStrike-14.png)
 
         - bind绑定键盘快捷键例如bind Ctrl+o{show_message("aaa");elog("bbb");}
 
         - popup自定义菜单例如:
 
-          - ![image-20220218143029938](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-15.png)
+          - ![image-20220218143029938](..\..\public\img\cobaltStrike-15.png)
 
           - ```sleep
             popup item1{
@@ -190,7 +190,7 @@ Cobalt Stricke->listener->add添加监听器
     - Browser Pivot:监听浏览器以获取cookie
     - Desktop:监控桌面
     - File Browser:
-      - ![image-20220218123725120](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-11.png)
+      - ![image-20220218123725120](..\..\public\img\cobaltStrike-11.png)
     - port scan:扫描端口
     - process list:查看所有进程
     - screenshot:截屏幕
@@ -206,7 +206,7 @@ Cobalt Stricke->listener->add添加监听器
 
 ### 用肉鸡来创建代理并连接到metasploit
 
-![image-20220218121633689](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-8.png)
+![image-20220218121633689](..\..\public\img\cobaltStrike-8.png)
 
 
 
@@ -214,11 +214,11 @@ Cobalt Stricke->listener->add添加监听器
 
 ### 跳板攻击
 
-![image-20220218121934998](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-9.png)
+![image-20220218121934998](..\..\public\img\cobaltStrike-9.png)
 
 单击save就可以看见Listeners多了一个监听端口
 
-![image-20220218122224254](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-10.png)
+![image-20220218122224254](..\..\public\img\cobaltStrike-10.png)
 
 然后让其他内网直接连接这个ip:port即可 
 
@@ -228,7 +228,7 @@ Cobalt Stricke->listener->add添加监听器
 
 将进程添加到键盘记录
 
-![image-20220218133049983](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-12.png)
+![image-20220218133049983](..\..\public\img\cobaltStrike-12.png)
 
 
 
@@ -236,7 +236,7 @@ Cobalt Stricke->listener->add添加监听器
 
 打开全局的键盘监听
 
-![image-20220218133152326](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-13.png)
+![image-20220218133152326](..\..\public\img\cobaltStrike-13.png)
 
 然后就可以监听键盘记录了
 
@@ -246,19 +246,19 @@ Cobalt Stricke->listener->add添加监听器
 
 首先生成一个木马
 
-![image-20220218163434235](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-16.png)
+![image-20220218163434235](..\..\public\img\cobaltStrike-16.png)
 
 设置监听的文件第二个图的file里选择木马，url里面的文件名称要和你的木马名称一致
 
-![image-20220218163509654](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-17.png)
+![image-20220218163509654](..\..\public\img\cobaltStrike-17.png)
 
-![image-20220218163554181](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-18.png)
+![image-20220218163554181](..\..\public\img\cobaltStrike-18.png)
 
 
 
 launch后他给出下载文件的地址,复制即可下载运行即可上线
 
-![image-20220218163757545](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-19.png)
+![image-20220218163757545](..\..\public\img\cobaltStrike-19.png)
 
 
 
@@ -286,21 +286,21 @@ shell net start "服务名称"
 
 首先给添加一个tcp监听
 
-![image-20220218171804604](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-20.png)
+![image-20220218171804604](..\..\public\img\cobaltStrike-20.png)
 
 然后创建一个payload使用刚刚建立的tcp监听
 
-![image-20220218171859961](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-21.png)
+![image-20220218171859961](..\..\public\img\cobaltStrike-21.png)
 
 然后上传到目标的内网服务器中并运行
 
 然后使用肉鸡的命令行输入connect [目标的ip地址]
 
-![image-20220218172009462](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-22.png)
+![image-20220218172009462](..\..\public\img\cobaltStrike-22.png)
 
 方法二:
 
-![image-20220218172823811](D:\Code\pojo\Blog\BlogHexo\public\img\cobaltStrike-23.png)
+![image-20220218172823811](..\..\public\img\cobaltStrike-23.png)
 
 首先使用肉鸡建立一个监听
 
@@ -440,31 +440,31 @@ sqlmap -u url或者域名
 
 首先我们可以设置代理
 
-![image-20220122160622437](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-1.png)
+![image-20220122160622437](..\..\public\img\Tools-1.png)
 
 然后去浏览器设置代理以火狐为例子
 
 去设置里面的高级---网络---代理
 
-![image-20220122161034011](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-2.png)
+![image-20220122161034011](..\..\public\img\Tools-2.png)
 
 然后安装协议首先访问http://burp
 
 然后下载证书,然后进入设置,高级---证书---证书机构---导入   这样导入证书
 
-![image-20220122161254985](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-3.png)
+![image-20220122161254985](..\..\public\img\Tools-3.png)
 
 
 
 #### 使用本地的DNS
 
-![image-20220122161507557](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-4.png)
+![image-20220122161507557](..\..\public\img\Tools-4.png)
 
 
 
 选择这个打开dns服务器,然后就可以使用并看到结果了
 
-![image-20220122161604192](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-5.png)
+![image-20220122161604192](..\..\public\img\Tools-5.png)
 
 
 
@@ -472,7 +472,7 @@ sqlmap -u url或者域名
 
 
 
-![image-20220122162024999](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-6.png)
+![image-20220122162024999](..\..\public\img\Tools-6.png)
 
 Send to Intruder和Send to Repeater的时候不能选择东西否则只会进行选择部分的测试
 
@@ -486,49 +486,49 @@ pikaqiu靶场
 
 首先单击请求进行请求
 
-![image-20220119151356569](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-7.png)
+![image-20220119151356569](..\..\public\img\Tools-7.png)
 
 然后抓到包后ctrl+i
 
-![image-20220119151545986](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-8.png)
+![image-20220119151545986](..\..\public\img\Tools-8.png)
 
 
 
 然后进入如下模块并对破解点进行添加
 
-![image-20220119151700990](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-9.png)
+![image-20220119151700990](..\..\public\img\Tools-9.png)
 
 
 
-![image-20220119154920801](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-10.png)
+![image-20220119154920801](..\..\public\img\Tools-10.png)
 
 设置一个type然后进入payloads
 
-![image-20220119155535580](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-11.png)
+![image-20220119155535580](..\..\public\img\Tools-11.png)
 
 设置线程数量
 
-![image-20220119155617982](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-12.png)
+![image-20220119155617982](..\..\public\img\Tools-12.png)
 
 设置正则获取页面数据
 
-![image-20220119155652450](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-13.png)
+![image-20220119155652450](..\..\public\img\Tools-13.png)
 
 
 
 单机add设置正则
 
-![image-20220119155849551](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-14.png)
+![image-20220119155849551](..\..\public\img\Tools-14.png)
 
 
 
-![image-20220119160023712](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-15.png)
+![image-20220119160023712](..\..\public\img\Tools-15.png)
 
 
 
 设置每次攻击前重新获取token就要进行重定向
 
-![image-20220119160133327](D:\Code\pojo\Blog\BlogHexo\public\img\Tools-16.png)
+![image-20220119160133327](..\..\public\img\Tools-16.png)
 
 
 
@@ -571,7 +571,7 @@ python neoreg.py -k 密码 -u 网站的脚本位置
 
 ## WireShark
 
-![image-20220214133549383](D:\Code\pojo\Blog\BlogHexo\public\img\wireshark.png)
+![image-20220214133549383](..\..\public\img\wireshark.png)
 
  （1）Frame:  物理层的数据帧概况
 
@@ -631,6 +631,157 @@ http://www.luckyzmj.cn/posts/477c90d0.html
 
 
 
+## dirsearch
+
+官网地址
+
+https://github.com/maurosoria/dirsearch
+
+直接使用python3 安装即可
+
+>pypi: pip3 install dirsearch
+>
+>dirsearch -u url -e 框架类型(php,asp)
+
+
+
+使用语法
+
+>Usage: dirsearch.py [-u|--url] target [-e|--extensions] extensions [options]
+>
+>Options:
+>  --version             show program's version number and exit
+>  -h, --help            show this help message and exit
+>
+>  Mandatory:
+>    -u URL, --url=URL   Target URL
+>    -l FILE, --url-list=FILE
+>                        Target URL list file
+>    --stdin             Target URL list from STDIN
+>    --cidr=CIDR         Target CIDR
+>    --raw=FILE          Load raw HTTP request from file (use `--scheme` flag
+>                        to set the scheme)
+>    -e EXTENSIONS, --extensions=EXTENSIONS
+>                        Extension list separated by commas (Example: php,asp)
+>    -X EXTENSIONS, --exclude-extensions=EXTENSIONS
+>                        Exclude extension list separated by commas (Example:
+>                        asp,jsp)
+>    -f, --force-extensions
+>                        Add extensions to every wordlist entry. By default
+>                        dirsearch only replaces the %EXT% keyword with
+>                        extensions
+>
+>  Dictionary Settings:
+>    -w WORDLIST, --wordlists=WORDLIST
+>                        Customize wordlists (separated by commas)
+>    --prefixes=PREFIXES
+>                        Add custom prefixes to all wordlist entries (separated
+>                        by commas)
+>    --suffixes=SUFFIXES
+>                        Add custom suffixes to all wordlist entries, ignore
+>                        directories (separated by commas)
+>    --only-selected     Remove paths have different extensions from selected
+>                        ones via `-e` (keep entries don't have extensions)
+>    --remove-extensions
+>                        Remove extensions in all paths (Example: admin.php ->
+>                        admin)
+>    -U, --uppercase     Uppercase wordlist
+>    -L, --lowercase     Lowercase wordlist
+>    -C, --capital       Capital wordlist
+>
+>  General Settings:
+>    -t THREADS, --threads=THREADS
+>                        Number of threads
+>    -r, --recursive     Brute-force recursively
+>    --deep-recursive    Perform recursive scan on every directory depth
+>                        (Example: api/users -> api/)
+>    --force-recursive   Do recursive brute-force for every found path, not
+>                        only paths end with slash
+>    --recursion-depth=DEPTH
+>                        Maximum recursion depth
+>    --recursion-status=CODES
+>                        Valid status codes to perform recursive scan, support
+>                        ranges (separated by commas)
+>    --subdirs=SUBDIRS   Scan sub-directories of the given URL[s] (separated by
+>                        commas)
+>    --exclude-subdirs=SUBDIRS
+>                        Exclude the following subdirectories during recursive
+>                        scan (separated by commas)
+>    -i CODES, --include-status=CODES
+>                        Include status codes, separated by commas, support
+>                        ranges (Example: 200,300-399)
+>    -x CODES, --exclude-status=CODES
+>                        Exclude status codes, separated by commas, support
+>                        ranges (Example: 301,500-599)
+>    --exclude-sizes=SIZES
+>                        Exclude responses by sizes, separated by commas
+>                        (Example: 123B,4KB)
+>    --exclude-texts=TEXTS
+>                        Exclude responses by texts, separated by commas
+>                        (Example: 'Not found', 'Error')
+>    --exclude-regexps=REGEXPS
+>                        Exclude responses by regexps, separated by commas
+>                        (Example: 'Not foun[a-z]{1}', '^Error$')
+>    --exclude-redirects=REGEXPS
+>                        Exclude responses by redirect regexps or texts,
+>                        separated by commas (Example: 'https://okta.com/*')
+>    --exclude-content=PATH
+>                        Exclude responses by response content of this path
+>    --skip-on-status=CODES
+>                        Skip target whenever hit one of these status codes,
+>                        separated by commas, support ranges
+>    --minimal=LENGTH    Minimal response length
+>    --maximal=LENGTH    Maximal response length
+>    --max-time=SECONDS  Maximal runtime for the scan
+>    -q, --quiet-mode    Quiet mode
+>    --full-url          Full URLs in the output (enabled automatically in
+>                        quiet mode)
+>    --no-color          No colored output
+>
+>  Request Settings:
+>    -m METHOD, --http-method=METHOD
+>                        HTTP method (default: GET)
+>    -d DATA, --data=DATA
+>                        HTTP request data
+>    -H HEADERS, --header=HEADERS
+>                        HTTP request header, support multiple flags (Example:
+>                        -H 'Referer: example.com')
+>    --header-list=FILE  File contains HTTP request headers
+>    -F, --follow-redirects
+>                        Follow HTTP redirects
+>    --random-agent      Choose a random User-Agent for each request
+>    --auth-type=TYPE    Authentication type (basic, digest, bearer, ntlm)
+>    --auth=CREDENTIAL   Authentication credential (user:password or bearer
+>                        token)
+>    --user-agent=USERAGENT
+>    --cookie=COOKIE
+>
+>  Connection Settings:
+>    --timeout=TIMEOUT   Connection timeout
+>    -s DELAY, --delay=DELAY
+>                        Delay between requests
+>    --proxy=PROXY       Proxy URL, support HTTP and SOCKS proxies (Example:
+>                        localhost:8080, socks5://localhost:8088)
+>    --proxy-list=FILE   File contains proxy servers
+>    --replay-proxy=PROXY
+>                        Proxy to replay with found paths
+>    --scheme=SCHEME     Default scheme (for raw request or if there is no
+>                        scheme in the URL)
+>    --max-rate=RATE     Max requests per second
+>    --retries=RETRIES   Number of retries for failed requests
+>    -b, --request-by-hostname
+>                        By default dirsearch requests by IP for speed. This
+>                        will force dirsearch to request by hostname
+>    --ip=IP             Server IP address
+>    --exit-on-error     Exit whenever an error occurs
+>
+>  Reports:
+>    -o FILE, --output=FILE
+>                        Output file
+>    --format=FORMAT     Report format (Available: simple, plain, json, xml,md, csv, html)
+
+
+
 ## scapy---这东西真好玩
 
 下面是官方源码地址:
@@ -641,7 +792,7 @@ http://www.luckyzmj.cn/posts/477c90d0.html
 
 ### 准备环境
 
-![image-20220129180955360](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-4.png)
+![image-20220129180955360](..\..\public\img\scapy-4.png)
 
 
 
@@ -655,7 +806,7 @@ http://www.luckyzmj.cn/posts/477c90d0.html
 
 > 如果显示没有找到包则证明环境变量不对,我以win10为例子来说明一下
 
-![image-20220129175922805](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-1.png)
+![image-20220129175922805](..\..\public\img\scapy-1.png)
 
 必须包含你python的Scripts在环境变量中
 
@@ -699,11 +850,11 @@ kali也是直接安装(kali是ubuntu那一支的)`pip install scapy`,然后还�
 
 建议这俩组合起来看,否则你就会遇见下面这种翻译,这tm不是机翻我真不信
 
-![img](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-2.png)
+![img](..\..\public\img\scapy-2.png)
 
 
 
-![111](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-3.png)
+![111](..\..\public\img\scapy-3.png)
 
 
 
@@ -772,13 +923,13 @@ kali也是直接安装(kali是ubuntu那一支的)`pip install scapy`,然后还�
 >
 > <IP  version=4 ihl=5 tos=0x0 len=20 id=1 flags= frag=0 ttl=64 proto=hopopt chksum=0x7ce7 src=127.0.0.1 dst=127.0.0.1 |>
 >
-> ![image-20220129185254036](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-5.png)
+> ![image-20220129185254036](..\..\public\img\scapy-5.png)
 >
-> ![image-20220129185355181](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-6.png)
+> ![image-20220129185355181](..\..\public\img\scapy-6.png)
 
 上面的e是使用函数对其进行补充后的包如果嫌他太臃肿可以使用`hide_defaults()来进行隐藏`
 
-![image-20220129185707137](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-7.png)
+![image-20220129185707137](..\..\public\img\scapy-7.png)
 
 
 
@@ -826,7 +977,7 @@ sr1()用于发送三层的数据包,有响应接收
 
 srp()用于二层的数据包,有响应接收
 
-![image-20220130110015724](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-8.png)
+![image-20220130110015724](..\..\public\img\scapy-8.png)
 
 
 
@@ -864,7 +1015,7 @@ fuzz()
 
 #### SYN扫描
 
-![image-20220130111816301](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-9.png)
+![image-20220130111816301](..\..\public\img\scapy-9.png)
 
 向百度发出请求,并且接收响应后退出,可以看出flags=SA表示该端口为开放端口
 
@@ -901,7 +1052,7 @@ ans, unans = _
 
 nsummary和summary的区别
 
-![image-20220203190633834](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-12.png)
+![image-20220203190633834](..\..\public\img\scapy-12.png)
 
 > ans.nsummary(lfilter = lambda s,r: r.sprintf("%TCP.flags%") == "SA")
 
@@ -909,7 +1060,7 @@ nsummary和summary的区别
 
 > ans.summary(lfilter = lambda s,r: r.sprintf("%TCP.flags%") == "SA",prn=lambda s,r: r.sprintf("%TCP.sport% is open"))
 
-![image-20220130113405578](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-10.png)
+![image-20220130113405578](..\..\public\img\scapy-10.png)
 
 懒得写了,也没法做测试,毕竟上个一测试我还没做完了
 
@@ -1013,7 +1164,7 @@ conf.L2socket和conf.L3socket
 
 监听指定的包如下：
 
-![image-20220203190331356](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-11.png)
+![image-20220203190331356](..\..\public\img\scapy-11.png)
 
 然后可以使用
 
@@ -1057,7 +1208,7 @@ sniff函数解析如下:
     >
     >x.sniffed_on代表根据,如下的eth0
     >
-    >![image-20220203191845601](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-13.png)
+    >![image-20220203191845601](..\..\public\img\scapy-13.png)
 
 操作系统识别:可以使用ping的TTL来识别,不过可能会被伪装,<64的操作系统是Linux或者unix反之则是Windows
 
@@ -1081,7 +1232,7 @@ ARP：地址解析协议用来通知网络我是谁
 
 关于scapy的ARP包
 
-![image-20220307165322717](D:\Code\pojo\Blog\BlogHexo\public\img\scapy-14.png)
+![image-20220307165322717](..\..\public\img\scapy-14.png)
 
 >op 为1代表请求,为2代表响应
 >
@@ -1215,7 +1366,7 @@ netsh进行msf的代理
 
 假设当前网络为这样
 
-![image-20220219163859692](D:\Code\pojo\Blog\BlogHexo\public\img\内网-1.png)
+![image-20220219163859692](..\..\public\img\内网-1.png)
 
 黑客(kali)                                                           Windows    1                                             Windows 2
 
@@ -1273,7 +1424,7 @@ netsh进行msf的代理
 
 >以下的命令是进入控制肉鸡之后输入的
 >
->![image-20220220140740957](D:\Code\pojo\Blog\BlogHexo\public\img\令牌-2.png)
+>![image-20220220140740957](..\..\public\img\令牌-2.png)
 >
 >也就是上面图片的那个模式
 
@@ -1282,7 +1433,7 @@ use incognito
 list_tokens -u(能看到的令牌数量因权限决定)
 
 然后会显示类似如下的信息
-![image-20220220140421802](D:\Code\pojo\Blog\BlogHexo\public\img\令牌-1.png)
+![image-20220220140421802](..\..\public\img\令牌-1.png)
 
 上面的Delegation Tokens是可以登录的下面的是不可以登录的
 
@@ -1440,7 +1591,7 @@ UAC绕过
 
 **数据包获取**
 
-![image-20220227134412878](D:\Code\pojo\Blog\BlogHexo\public\img\sniffer.png)
+![image-20220227134412878](..\..\public\img\sniffer.png)
 
 >load sniffer #加载sniffer
 >

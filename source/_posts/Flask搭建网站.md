@@ -81,7 +81,7 @@ def ccccc():
 
 https://blog.csdn.net/u011146423/article/details/88191225
 
-![image-20220113152615716](D:\Code\pojo\Blog\BlogHexo\public\img\Flask-1.png)
+![image-20220113152615716](..\..\public\img\Flask-1.png)
 
 
 

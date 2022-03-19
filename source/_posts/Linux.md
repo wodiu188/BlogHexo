@@ -1961,7 +1961,7 @@ echo $? 输出上一个的状态码,不是0就是错误
 
 - <<:标准输入流,将命令所需的字符串通过键盘输入并设置结束标志
 
-  - ![111](D:\Code\pojo\Blog\BlogHexo\public\img\linux.png)
+  - ![111](..\..\public\img\linux.png)
 
 - 2\>:标准错误流到指定位置并进行覆盖
 
